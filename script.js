@@ -1,10 +1,11 @@
+// (c)2023 rob cranfill
 class IsoCalc {
   constructor() {
     // this.reset()
   }
 
   changeCans(grossWeight, netWeight) {
-    console.info("change cans! " + grossWeight + "/" + netWeight)
+    // console.info("change cans: " + grossWeight + "/" + netWeight)
     document.querySelector('div[name="fgw"]').innerText = grossWeight
     document.querySelector('div[name="fnw"]').innerText = netWeight
     document.querySelector('div[name="ew"]').innerText = grossWeight - netWeight
@@ -16,29 +17,21 @@ class IsoCalc {
   }
 
   computeAndDisplay() {
-    console.info("computeAndDisplay!")
-
-    // why not just get the objects as needed?
 
     const fgw = document.querySelector('div[name="fgw"]').innerText
-    console.info("fgw: " + fgw)
-
     const cgw = document.querySelector('input[name="cgw"]').value
-    console.info("cgw: " + cgw)
-
     const ew = document.querySelector('div[name="ew"]').innerText
-    console.info("ew: " + ew)
 
     // the calculations:
     var cnw = cgw - ew
-    console.info("-> Current net weight: " + cnw)
-
     const fnw = document.querySelector('div[name="fnw"]').innerText
-    console.info("fnw: " + fnw)
-
     const ff = Math.trunc((cnw / fnw) * 100)
+
+    console.info("-> Current net weight: " + cnw)
+    console.info("fnw: " + fnw)
     console.info("ff: " + ff + "%")
-  
+    
+    // show the results
     document.querySelector('div[name="ff"]').innerText = ff + "%"
     document.querySelector('div[name="cnw"]').innerHTML = cnw
   }
