@@ -45,7 +45,7 @@ reset() {
     const ew = ew_obj.innerText
     console.info("ew: " + ew)
 
-    // the calculation:
+    // the calculations:
     var cnw = cgw - ew
     console.info("CURRENT NET WEIGHT: " + cnw)
 
@@ -56,13 +56,20 @@ reset() {
       return
     }
     const fnw = fnw_obj.innerText
-    console.info("fnw: " + fnw)
-    
-    ff = cnw / fnw
+    console.info("fnw: (WTF?) " + fnw)
+
+    const ff = Math.trunc((cnw / fnw) * 100)
     console.info("ff: " + ff + "%")
+  
+
+    const ff_obj = document.querySelector('div[name="ff"]')
+    if (ff_obj === null) {
+      console.error("FF IS NULL! in computeAndDisplay")
+      return
+    }
+    ff_obj.innerText = ff + "%"
     
     netWeightDisplay.innerHTML = cnw
-
   }
 
 
