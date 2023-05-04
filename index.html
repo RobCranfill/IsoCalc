@@ -5,25 +5,23 @@
         <meta charset="utf-8">
 
         <title>IsoCalc</title>
-
-        <!-- Load external CSS styles -->
         <link rel="stylesheet" href="style.css">
 
     </head>
 
     <body>
-
         <h1>IsoCalc</h1>
+        <p>Calculates the net weight of gas left in various sized canisters of IsoPRO fuel.</p>
         <p>All values in grams</p>
-        <!-- Load our JavaScript -->
+
         <script src="script.js" defer></script>
         
         <form id="form" onsubmit="return false;">
 
-          <input type="radio" id="oz8" name="can_size" value="oz8" checked>
-            <label for="html">8 oz MSR IsoPro</label><br>
-          <input type="radio" id="oz4" name="can_size" value="oz4" disabled>
-            <label for="css">4 oz MSR IsoPro</label><br>
+          <input type="radio" id="oz8" name="canSelect" value="oz8" checked>
+            <label for="oz8">8 oz MSR IsoPro</label><br>
+          <input type="radio" id="oz4" name="canSelect" value="oz4">
+            <label for="oz4">4 oz MSR IsoPro</label><br>
 <br>
 
         <table>
@@ -54,7 +52,6 @@
           </tr>
         </table>
         <button type="submit">Calculate</button>
-        <!-- <input type="Submit" name="Calculate" value="Calculate"> -->
       </form>
 
     </body>
