@@ -1,25 +1,34 @@
 // (c)2023 rob cranfill
+// https://github.com/RobCranfill/IsoCalc
+//
 class IsoCalc {
   constructor() {
     // this.reset()
   }
+
+  // clear old input and results
+  clearOld() {
+    document.querySelector('input[name="cgw"]').value = ""
+    document.querySelector('div[name="ff"]').innerText = ""
+    document.querySelector('div[name="cnw"]').innerHTML = ""
+    }
 
   changeCans(grossWeight, netWeight) {
     // console.info("change cans: " + grossWeight + "/" + netWeight)
     document.querySelector('div[name="fgw"]').innerText = grossWeight
     document.querySelector('div[name="fnw"]').innerText = netWeight
     document.querySelector('div[name="ew"]').innerText = grossWeight - netWeight
-
-    // clear old input and results
-    document.querySelector('input[name="cgw"]').value = ""
-    document.querySelector('div[name="ff"]').innerText = ""
-    document.querySelector('div[name="cnw"]').innerHTML = ""
+    this.clearOld()
   }
 
   computeAndDisplay() {
 
     const fgw = document.querySelector('div[name="fgw"]').innerText
     const cgw = document.querySelector('input[name="cgw"]').value
+    if (cgw == "") { // or check for a number?
+      this.clearOld()
+      return
+    }
     const ew = document.querySelector('div[name="ew"]').innerText
 
     // the calculations:
@@ -27,10 +36,10 @@ class IsoCalc {
     const fnw = document.querySelector('div[name="fnw"]').innerText
     const ff = Math.trunc((cnw / fnw) * 100)
 
-    console.info("-> Current net weight: " + cnw)
-    console.info("fnw: " + fnw)
-    console.info("ff: " + ff + "%")
-    
+    // console.info("-> Current net weight: " + cnw)
+    // console.info("fnw: " + fnw)
+    // console.info("ff: " + ff + "%")
+
     // show the results
     document.querySelector('div[name="ff"]').innerText = ff + "%"
     document.querySelector('div[name="cnw"]').innerHTML = cnw

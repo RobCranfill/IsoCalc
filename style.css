@@ -1,3 +1,8 @@
+/*
+  (c)2023 rob cranfill
+  https://github.com/RobCranfill/IsoCalc
+ */
+
 *, *::before, *::after {
   box-sizing: border-box;
   font-family: Gotham Rounded, sans-serif;

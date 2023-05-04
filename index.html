@@ -1,59 +1,56 @@
 <!doctype html>
-<!-- (c)2023 rob cranfill -->
+<!-- 
+  (c)2023 rob cranfill 
+  see https://github.com/RobCranfill/IsoCalc
+-->
 <html>
     <head>
         <meta charset="utf-8">
-
         <title>IsoCalc</title>
         <link rel="stylesheet" href="style.css">
-
     </head>
 
     <body>
-        <h1>IsoCalc</h1>
-        <p>Calculates the net weight of gas left in various sized canisters of IsoPRO fuel.</p>
-        <p>All values in grams</p>
+      <script src="script.js" defer></script>
+    
+      <h1>IsoCalc</h1>
+      <p>Calculates the net weight of gas left in various sized canisters of IsoPRO fuel.</p>
+      <p>All values in grams</p>
 
-        <script src="script.js" defer></script>
-        
-        <form id="form" onsubmit="return false;">
+      <form id="form" onsubmit="return false;">
 
-          <input type="radio" id="oz8" name="canSelect" value="oz8" checked>
-            <label for="oz8">8 oz MSR IsoPro</label><br>
-          <input type="radio" id="oz4" name="canSelect" value="oz4">
-            <label for="oz4">4 oz MSR IsoPro</label><br>
+        <input type="radio" id="oz8" name="canSelect" value="oz8" checked>
+          <label for="oz8">8 oz MSR IsoPro</label><br>
+        <input type="radio" id="oz4" name="canSelect" value="oz4">
+          <label for="oz4">4 oz MSR IsoPro</label><br>
 <br>
-
-        <table>
-            
-            <tr>
-              <td>Full gross weight</td>
-              <td><div name="fgw" id="fgw" value="374">374</div></td>
-            </tr>
-            <tr>
-              <td>Full net weight</td>
-              <td><div name="fnw" id="fnw" value="227">227</div></td>
-            </tr>
-            <tr>
-                <td>Empty weight</td>
-                <td><div name="ew" id="ew" value="147">147</div></td>
-            </tr>
-            <tr>
-                <td>Current gross weight</td>
-                <td><input name="cgw" id="cgw" type="text" value="374"></td>
-            </tr>
-            <tr>
-              <td>Current net weight</td>
-              <td><div name="cnw" id="cnw" value="227">227</div></td>
-            </tr>
-            <tr>
-              <td>Fraction full</td>
-              <td><div name="ff" id="ff" value="100%">100%</div></td>
+      <table>
+          <tr>
+            <td>Full gross weight</td>
+            <td><div name="fgw" id="fgw" value="374">374</div></td>
           </tr>
-        </table>
-        <button type="submit">Calculate</button>
-      </form>
-
-    </body>
-
+          <tr>
+            <td>Full net weight</td>
+            <td><div name="fnw" id="fnw" value="227">227</div></td>
+          </tr>
+          <tr>
+              <td>Empty weight</td>
+              <td><div name="ew" id="ew" value="147">147</div></td>
+          </tr>
+          <tr>
+              <td>Current gross weight</td>
+              <td><input name="cgw" id="cgw" type="text" value="374"></td>
+          </tr>
+          <tr>
+            <td>Current net weight</td>
+            <td><div name="cnw" id="cnw" value="227">227</div></td>
+          </tr>
+          <tr>
+            <td>Fraction full</td>
+            <td><div name="ff" id="ff" value="100%">100%</div></td>
+        </tr>
+      </table>
+      <button type="submit">Calculate</button>
+    </form>
+  </body>
 </html>
