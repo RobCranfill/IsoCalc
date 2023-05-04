@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>IsoCalc</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+
+        <h1>IsoCalc</h1>
+        
+        <!-- Load our JavaScript -->
+        <script src="script.js" defer></script>
+        
+        <form id="form" onsubmit="return false;">
+
+          <input type="radio" id="oz8" name="can_size" value="oz8" checked>
+            <label for="html">8 oz MSR IsoPro</label><br>
+          <input type="radio" id="oz4" name="can_size" value="oz4">
+            <label for="css">4 oz MSR IsoPro</label><br>
+
+        <table>
+            
+            <tr>
+                <td>Full net weight</td>
+                <td><div name="fnw" id="fnw" value="227">227</div></td>
+            </tr>
+            <tr>
+                <td>Full gross weight</td>
+                <td><div name="fgw" id="fgw" value="324">324</div></td>
+            </tr>
+            <tr>
+                <td>(Empty weight)</td>
+                <td><div name="ew" id="ew" value="147">147</div></td>
+            </tr>
+            <tr>
+                <td>Current gross weight</td>
+                <td><input name="cgw" id="cgw" type="text" value="?"></td>
+            </tr>
+            <tr>
+              <td>Current net weight</td>
+              <td><div name="cnw" id="cnw" value="??">??</div></td>
+            </tr>
+            <tr>
+              <td>Fraction full</td>
+              <td><div name="ff" id="ff" value="???">???%</div></td>
+          </tr>
+        </table>
+        <button type="submit">Calculate</button>
+        <!-- <input type="Submit" name="Calculate" value="Calculate"> -->
+      </form>
+
+    </body>
+
+</html>
