@@ -10,14 +10,19 @@
         <link rel="stylesheet" href="style.css">
     </head>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NKDSV3VT7K"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-NKDSV3VT7K');
-  </script>
+    <script
+      type="module" 
+      src="https://cdn.jsdelivr.net/npm/steelseries@2.0.7/dist/steelseries.bundled.min.js">
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NKDSV3VT7K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NKDSV3VT7K');
+    </script>
 
     <body>
       <script src="script.js" defer></script>
@@ -25,6 +30,8 @@
       <h1>IsoCalc</h1>
       <p>Calculates the net weight of gas left in various sized canisters of IsoPRO fuel.</p>
       <p>All values in grams</p>
+
+      <table><tr><td>
 
       <form id="form" onsubmit="return false;">
 
@@ -61,5 +68,13 @@
       </table>
       <button type="submit">Calculate</button>
     </form>
+
+  </td>
+  <td>
+    <steelseries-linear id="gauge" value="0"></steelseries-linear>
+  </td>
+            
+  </table>
+
   </body>
 </html>

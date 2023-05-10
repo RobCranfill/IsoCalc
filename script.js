@@ -34,17 +34,20 @@ class IsoCalc {
     // the calculations:
     var cnw = cgw - ew
     const fnw = document.querySelector('div[name="fnw"]').innerText
-    const ff = Math.trunc((cnw / fnw) * 100)
+    const ff_percent = Math.trunc((cnw / fnw) * 100)
 
     // console.info("-> Current net weight: " + cnw)
     // console.info("fnw: " + fnw)
-    // console.info("ff: " + ff + "%")
+    // console.info("ff: " + ff_percent + "%")
 
     // show the results
-    document.querySelector('div[name="ff"]').innerText = ff + "%"
+    document.querySelector('div[name="ff"]').innerText = ff_percent + "%"
     document.querySelector('div[name="cnw"]').innerHTML = cnw
+
+    document.querySelector('steelseries-linear[id="gauge"]').value = ff_percent
   }
-}
+
+} // end class IsoCalc
 
 const isocalc = new IsoCalc()
 isocalc.changeCans(374, 227)
