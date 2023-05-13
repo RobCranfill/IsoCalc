@@ -44,7 +44,16 @@ class IsoCalc {
     document.querySelector('div[name="ff"]').innerText = ff_percent + "%"
     document.querySelector('div[name="cnw"]').innerHTML = cnw
 
+    var gaugeColor = "RED"
+    if (ff_percent > 50) {
+      gaugeColor = "YELLOW"
+    }
+    if (ff_percent > 80) {
+      gaugeColor = "GREEN"
+    }
     document.querySelector('steelseries-linear[id="gauge"]').value = ff_percent
+    document.querySelector('steelseries-linear[id="gauge"]').valueColor = gaugeColor
+    
   }
 
 } // end class IsoCalc

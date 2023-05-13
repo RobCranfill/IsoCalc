@@ -5,5 +5,9 @@ Very simple HTML page that will tell you how much gas is left in a canister, giv
 
 Things to do: 
 * Allow use of ounces?
+* Add 16 canister?
+* Check for bogus input values and complain?
 * Make it prettier.
 
+
+I may or may not keep an instance of this running at http://robcranfill.net/isocalc
